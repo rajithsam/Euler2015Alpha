@@ -1,0 +1,1 @@
+C:\xampp\htdocs\backofficeph_project\app/views/deductions/index.blade.php

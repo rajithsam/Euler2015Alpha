@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Welcome to Back Office TimeTracker! BPO TimeTracker!</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--link href="<?php echo URL::asset('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"-->    
+
+    <link href="<?php echo URL::asset('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo URL::asset('assets/css/jquery-ui.css'); ?>">     
+
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>    
+
+    <!-- Font Awesome -->
+    <!--link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"-->   
+    <link rel="stylesheet" href="<?php echo URL::asset('assets/css/font-awesome.min.css'); ?>">   
+
+    <!-- Custom styles for this template -->
+    <link href="<?php echo URL::asset('assets/css/style.css'); ?>" rel="stylesheet">   
+
+    <link href="<?php echo URL::asset('assets/css/metisMenu.min.css'); ?>" rel="stylesheet">    
+
+    <link href="<?php echo URL::asset('assets/css/jquery.dataTables.min.css'); ?>" rel="stylesheet"> 
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src=<?php echo URL::asset('assets/js/ie8-responsive-file-warning.js'); ?>"></script><![endif]-->
+    <script src="<?php echo URL::asset('assets/js/ie-emulation-modes-warning.js'); ?>"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+  <body>
+
+    <div class="container">    
+      <?php echo $__env->yieldContent('content'); ?>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script-->    
+    <script src="<?php echo URL::asset('assets/js/jquery.min.js'); ?>"></script>    
+    <script src="<?php echo URL::asset('assets/js/bootstrap.min.js'); ?>"></script>
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script-->    
+    <script src="<?php echo URL::asset('assets/js/jquery-ui.min.js'); ?>"></script>     
+    <script src="<?php echo URL::asset('assets/js/scripts.js'); ?>"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="<?php echo URL::asset('assets/js/ie10-viewport-bug-workaround.js'); ?>"></script>
+
+    <!-- Moment.js -->
+    <!--script src="<?php echo URL::asset('assets/js/moment.js'); ?>"></script-->
+
+    <!-- Datatables code -->
+    <script src="<?php echo URL::asset('assets/js/jquery.dataTables.min.js'); ?>"></script>
+    <script src="<?php echo URL::asset('assets/js/jquery.jeditable.js'); ?>"></script>
+    <!-- Bootbox code http://bootboxjs.com/-->
+    <script src="<?php echo URL::asset('assets/js/bootbox.js'); ?>"></script>  
+
+    <!-- Twitter Bootstrap specific plugin -->
+    <script src="<?php echo URL::asset('assets/js/collapse.js'); ?>"></script>
+    <script src="<?php echo URL::asset('assets/js/transition.js'); ?>"></script>
+    <script src="<?php echo URL::asset('assets/js/dropdown.js'); ?>"></script>
+
+    <script src="<?php echo URL::asset('assets/js/holder.min.js'); ?>"></script>
+    <script src="<?php echo URL::asset('assets/js/metisMenu.min.js'); ?>"></script>
+  
+  </body>
+</html>

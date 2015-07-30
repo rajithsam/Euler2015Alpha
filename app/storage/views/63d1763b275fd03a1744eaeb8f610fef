@@ -1,0 +1,114 @@
+<?php $__env->startSection('content'); ?>
+
+<div class="page-container">
+
+        <div class="row" style="padding-bottom:20px;">
+
+          <div class="col-md-3 clearfix">
+
+            <aside class="sidebar">
+              <nav class="sidebar-nav">
+                <ul id="menu">
+                  <li>
+                    <a href="<?php echo url('/admin/dashboard'); ?>">
+                      <span class="sidebar-nav-item-icon fa fa-tachometer fa-lg"></span>                      
+                      <span class="sidebar-nav-item">Dashboard</span>                      
+                    </a>
+                    
+                  </li>
+                  <li>
+                      <a href="<?php echo url('/admin/timeclock'); ?>">
+                      <span class="sidebar-nav-item-icon fa fa-clock-o fa-lg"></span>
+                      <span class="sidebar-nav-item">TimeClock & Attendance</span>
+                      </a>
+                      <!--ul class="submenu-1 collapse">
+                          <li><a href="<?php echo url('/admin/timeclock'); ?>">Overtime</a></li>
+                          <li><a href="<?php echo url('/admin/timeclock/report'); ?>">Overtime</a></li>
+                      </ul-->
+                  </li>
+                  <li>
+                      <a href="<?php echo url('/admin/scheduling'); ?>">
+                      <span class="sidebar-nav-item-icon fa fa-calendar fa-lg"></span>
+                      <span class="sidebar-nav-item">Employee Scheduling</span>
+                      </a>
+                      <!--ul class="submenu-1 collapse hide hidden">
+                          <li><a href="#">item 0.1</a></li>
+                      </ul-->
+                  </li>
+                  <li>
+                      <a href="<?php echo url('/admin/hr'); ?>">
+                      <span class="sidebar-nav-item-icon fa fa-users fa-lg"></span>
+                      <span class="sidebar-nav-item">Human Resources</span>
+                      </a>
+                      <ul class="submenu-1 collapse">
+                          <li><a href="<?php echo url('/admin/hr/employees'); ?>">Employees</a></li>
+                      </ul>
+                  </li>                  
+                  <li>
+                      <a href="<?php echo url('/admin/payroll'); ?>">
+                      <span class="sidebar-nav-item-icon fa fa-calculator fa-lg"></span>
+                      <span class="sidebar-nav-item">Payroll</span>
+                      </a>
+                      <!--ul class="submenu-1 collapse hide hidden">
+                          <li><a href="#">item 0.1</a></li>
+                      </ul-->
+                  </li>
+                  <li>
+                      <a href="#">
+                      <span class="sidebar-nav-item-icon fa fa-cogs fa-lg"></span>
+                      <span class="sidebar-nav-item">Admin</span>
+                      </a>
+                      <!--ul class="submenu-1 collapse hide hidden">
+                          <li><a href="#">item 0.1</a></li>
+                      </ul-->
+                  </li>                                                      
+                </ul>
+               </nav>
+            </aside>                     
+
+          </div><!--//.col-md-2-->
+
+          <div id="content" class="col-md-9" role="main">
+
+            <ol class="breadcrumb hide hidden">
+              <li><a href="#">Home</a></li>
+              <li class="active">Page</li>
+            </ol>
+
+            <h1 class="page-header">Edit</h1>
+  
+            <div class="panel panel-default">
+              <!-- Default panel contents -->
+              <div class="panel-heading" style="font-size:14px; font-weight:bold;">Edit Group</div>
+              <div class="panel-body">
+
+                <?php echo Form::open(array('action' => array('GroupController@handleEditGroup'))); ?>
+
+
+                        <?php echo Form::label('groupname', 'Group Name'); ?>
+
+                        <input type="text" name="groupname" required="" value="<?php echo $group->name; ?>" />
+                        <input type="hidden" name="id" value="<?php echo $group->id; ?>" />
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-custom-default">Save changes</button>
+                            <a href="<?php echo action('GroupController@index'); ?>" class="btn btn-custom-default">Cancel</a>
+                        <br><br>
+                        <?php echo $__env->make('admin.edit_permissions_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-custom-default">Save changes</button>
+                            <a href="<?php echo action('GroupController@index'); ?>" class="btn btn-custom-default">Cancel</a>
+                        </div>    
+            
+                <?php echo Form::close(); ?>   
+
+              </div>   
+            </div>
+
+        </div><!--//#content .col-md-9-->           
+
+        </div><!--//.row-->
+
+      </div><!--//.page-container-->
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

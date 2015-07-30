@@ -1,0 +1,88 @@
+<?php $__env->startSection('content'); ?>
+
+<div class="row">
+
+<div role="tabpanel">
+
+<h3 style="font-size:14px; font-weight:bold;">Add New User</h3>  		    
+            <?php /* Form::open(array('url' => '/admin/user/createuser', 'id' => 'timeClockingForm', 'class' => 'form-horizontal')) */ ?>                           
+            <?php echo Form::open(array('url' => '/admin/user/new', 'id' => 'timeClockingForm', 'class' => 'form-horizontal')); ?>				 
+            
+            <div class="form-group">
+                <?php echo Form::label('employe_number', 'Employee Number', array('class' => 'col-sm-2 control-label')); ?>           
+                <div class="col-sm-3">
+                <?php echo Form::text('employee_number', '', array('id' => '', 'class' => 'form-control', 'placeholder' => 'Employee Number')); ?>
+
+                </div>
+            </div>            
+
+            <div class="form-group">           
+                <?php echo Form::label('firstname', 'Firstname', array('class' => 'col-sm-2 control-label')); ?>
+
+                <div class="col-sm-3">            
+                <?php echo Form::text('firstname', '', array('id' => '', 'class' => 'form-control', 'placeholder' => 'First name')); ?>            
+                </div>                        
+            </div>            
+
+            <div class="form-group">           
+                <?php echo Form::label('lastname', 'Lastname', array('class' => 'col-sm-2 control-label')); ?>            
+                <div class="col-sm-3">            
+                <?php echo Form::text('lastname', '', array('id' => '', 'class' => 'form-control', 'placeholder' => 'last name')); ?>            
+                </div>            
+            </div>            
+            
+
+            
+            <div class="form-group">           
+                <?php echo Form::label('middlename', 'Middlename', array('class' => 'col-sm-2 control-label')); ?>
+
+                <div class="col-sm-3">            
+                <?php echo Form::text('middlename', '', array('id' => '', 'class' => 'form-control', 'placeholder' => 'Middle name')); ?>            
+                </div>                        
+            </div>            
+            
+            <div class="form-group">           
+                <?php echo Form::label('nick_name', 'Nick name', array('class' => 'col-sm-2 control-label')); ?>
+
+                <div class="col-sm-3">           
+                <?php echo Form::text('nick_name', '', array('id' => '', 'class' => 'form-control', 'placeholder' => 'Nick name')); ?>            
+                </div>                        
+            </div>
+
+            <div class="form-group">           
+                <?php echo Form::label('email', 'Email', array('class' => 'col-sm-2 control-label')); ?>
+
+                <div class="col-sm-3">           
+                <?php echo Form::text('email', '', array('id' => '', 'class' => 'form-control', 'placeholder' => 'Email')); ?>            
+                </div>                        
+            </div>            
+            
+            <div class="form-group">           
+                <?php echo Form::label('password', 'Password', array('class' => 'col-sm-2 control-label')); ?>
+
+                <div class="col-sm-3">            
+                <?php echo Form::password('password', array('id' => '', 'class' => 'form-control', 'placeholder' => 'Password')); ?>            
+                </div>                        
+            </div>   
+
+            <div class="form-group">           
+                <?php echo Form::label('group', 'Group', array('class' => 'col-sm-2 control-label')); ?>
+
+                <div class="col-sm-3">           
+                <?php echo Form::select('group', array('1' => 'Employee', '3' => 'Administrator', '4' => 'Supervisor', '7' => 'HR User'), '1', array('class' => 'form-control')); ?>            
+                </div>                        
+            </div>                                 
+
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="col-sm-3">                        
+	            <?php echo Form::submit('Add New User', array('class' => '', 'class' => 'btn btn-primary')); ?>
+
+                </div>                                        
+            </div>            
+            
+            <?php echo Form::close(); ?>							
+
+</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

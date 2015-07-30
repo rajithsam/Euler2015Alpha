@@ -1,0 +1,73 @@
+<?php $__env->startSection('content'); ?>
+
+<div class="row">
+
+<div role="tabpanel">
+
+    <h3 style="font-size:14px; font-weight:bold;">Add User | Default Schedule</h3>  		        
+
+    <?php if($errors->has()): ?>
+    <div class="alert alert-danger">
+        <ul>
+            <?php foreach($errors->all() as $error): ?>
+                <li><?php echo $error; ?></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <?php endif; ?>        
+
+    <?php echo Session::get('newEmployeeId'); ?>
+
+    <?php echo Form::open(array('url' => '/admin/user/new/schedule/', 'id' => 'timeClockingForm', 'class' => 'form-horizontal')); ?>				
+    
+    <?php echo Form::hidden('new_employee_id',  $newEmployeeId);; ?>
+
+
+    <div class="form-group">   
+        <?php echo Form::label('rest_day', 'Rest Day', array('class' => 'col-sm-2 control-label')); ?>
+
+        <div class="col-sm-2">
+        <?php echo Form::text('rest_day', '', array('id' => '', 'class' => 'form-control', 'placeholder' => '')); ?>                    
+        </div>        
+    </div>    
+
+    <div class="form-group">   
+        <?php echo Form::label('start_time', 'Start Time', array('class' => 'col-sm-2 control-label')); ?>                    
+        <div class="col-sm-2">
+        <?php echo Form::text('start_time', '', array('id' => '', 'class' => 'form-control', 'placeholder' => '00:00')); ?>                    
+        </div>        
+    </div>                 
+    
+    <div class="form-group">               
+        <?php echo Form::label('start_ampm', 'Start AM/PM', array('class' => 'col-sm-2 control-label')); ?>        
+        <div class="col-sm-1">        
+        <?php echo Form::select('start_ampm', array('am' => 'AM', 'pm' => 'PM'), '', array('class' => 'form-control')); ?>                    
+        </div>        
+    </div>                                     
+
+    <div class="form-group">           
+        <?php echo Form::label('end_time', 'End Time', array('class' => 'col-sm-2 control-label')); ?>                    
+        <div class="col-sm-2">        
+        <?php echo Form::text('end_time', '', array('id' => '', 'class' => 'form-control', 'placeholder' => '00:00')); ?>                    
+        </div>                
+    </div>                 
+    
+    <div class="form-group">           
+        <?php echo Form::label('end_ampm', 'End AM/PM', array('class' => 'col-sm-2 control-label')); ?>        
+        <div class="col-sm-1">                
+        <?php echo Form::select('end_ampm', array('am' => 'AM', 'pm' => 'PM'), '', array('class' => 'form-control')); ?>                    
+        </div>                
+    </div>                                         
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+        <?php echo Form::submit('Add', array('class' => '', 'class' => 'btn btn-primary')); ?>          
+        </div>
+    </div>      
+    
+    <?php echo Form::close(); ?>							
+
+</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,443 @@
+/**
+* 
+* TWITTER BOOTSTRAP OVERRIDES STYLE
+* 
+*/
+
+body {
+	background-color:#f1f1f1; /*dcdcdc*/
+	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Open Sans Condensed', sans-serif; */
+	font-size:11px;
+	color:#1a1a19;
+}
+
+a {
+	color: #b32728;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #b32728;
+}
+
+.page-container {	
+	padding-top:70px;
+}
+
+.page-header {
+
+	margin:0 0 20px 0;
+	padding:0 0 10px 0;
+	border-bottom:1px solid #dcdcdc;
+	font-size:21px;
+
+}
+
+.table-body-container {
+
+}
+
+.table-head-container,
+.table-foot-container {
+	height: 3px;		 
+}
+
+.table-foot-container {
+	height: 8px;		 	
+}
+
+.table-head-container {
+	background-color: #b32728;
+	-moz-border-radius-topleft: 3px;
+	-webkit-border-top-left-radius: 3px;
+	 border-top-left-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.table-foot-container {
+	margin-bottom: 20px;
+	background-color: #1a1a19;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+/**
+*
+* TABLE
+*
+*/
+
+/*.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+  padding: 2px;
+}*/	
+
+table.timesheet {
+	margin-bottom: 0;
+}
+
+table.timesheet > thead {
+	background-color: #b32728;
+}
+
+table.timesheet > tfoot {	
+	background-color: #1a1a19;
+}
+
+table.timesheet>thead, 
+table.timesheet>tfoot {
+	color:#dcdcdc;
+	text-transform: uppercase;	
+}
+
+table.timesheet>thead>tr>th,
+table.timesheet>tfoot>tr>th {
+
+	font-weight: normal;
+
+}
+
+
+table.timesheet>thead>tr>th,
+table.timesheet>tfoot>tr>th {
+  vertical-align: middle;  
+}
+
+table.timesheet>thead>tr>th,
+table.timesheet>tfoot>tr>th,
+table.timesheet>tbody>tr>td {
+	text-align: left;
+	/*padding:3px;
+	margin:0;
+	font-size:10px;*/
+}
+
+table.timesheet>thead>tr>th,
+table.timesheet>tfoot>tr>th {
+	text-align: center;
+
+}
+
+table.timesheet>tbody>tr>td {
+
+	text-align: right;
+}
+
+table.timesheet>thead>tr>th {
+	padding: 4px 8px 10px 8px;
+}
+
+table.timesheet>tfoot>tr>th {
+	padding: 10px 8px 4px 8px;
+}
+
+
+table.timesheet.table-striped>tbody>tr:nth-of-type(even) {
+  background-color: #dcdcdc;
+}
+
+
+/**
+*
+* NAVBAR
+*
+*/
+
+.navbar-inverse {
+	background-color: #1a1a19;
+	border-color: #000;
+}
+
+.navbar-brand {
+	float: left;
+	height: 50px;
+	padding: 15px 15px;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #dcdcdc;
+}
+
+.navbar-inverse .navbar-brand span {
+	color:#959595;
+}
+
+.navbar-inverse .navbar-brand strong span {
+	color:#b32728;
+}
+
+/*
+*
+* PANEL & PANEL GROUP
+*
+*/
+
+.panel-custom-group .panel+.panel {
+
+	margin-top: 0;
+
+}
+
+.panel-custom {
+	margin:0;
+	padding:0;
+	border: none; 
+	border: 0; 
+
+}
+
+.panel-custom .panel-title {
+	text-transform: uppercase;
+	font-size:11px;
+}
+
+
+.panel-custom-default {
+
+}
+
+.panel-custom-default #summary {	
+
+}
+
+.panel-custom-default>.panel-heading {
+	color:#dcdcdc;
+	background-color:#b32728;
+	border-bottom: 1px #0F0F0E solid;
+	font-size:12px;	
+}
+
+.panel-custom-default>.panel-heading a:link,
+.panel-custom-default>.panel-heading a:visited,
+.panel-custom-default>.panel-heading a:hover,
+.panel-custom-default>.panel-heading a:active,
+.panel-custom-default>.panel-heading a.active {
+	text-decoration:none;
+	color:#dcdcdc;
+}
+
+.panel-heading-trl-radius-reset {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+
+/**
+*
+* BUTTONs
+*
+*/
+
+.btn-custom-default {
+	color: #dcdcdc;
+	background-color: #b32728;
+	border-color: #b32728;
+}
+
+.btn-custom-default:hover {
+	color: #fff;
+}
+
+
+.timesheet .btn,
+.timesheet-ajax .btn {
+	padding: 1px 2px;
+	font-size:10px;		
+}
+
+
+/**
+*
+* BREADCRUMB
+*
+*/
+
+.breadcrumb {
+  background-color: #dcdcdc; /*b32728*/
+  color:#1a1a19;
+}
+
+.breadcrumb>.active {
+  color: #1a1a19;
+}
+
+.breadcrumb>li+li:before {
+  padding: 0 5px;
+  color: #1a1a19;
+  content: "\000BB";
+}
+
+
+/**
+*
+* LOGIN SPECIFIC STYLE
+*
+*/
+
+#login-section {
+	padding:8% 0 0;
+}
+
+#login-section .login h1 {
+	background-color:#1a1a19;
+	text-align:center;	
+	color:#dcdcdc;
+}
+
+#login-section .login .branding {
+	margin:0 auto 0 auto;
+	padding:10px 20px;
+	/*width:360px;*/
+	display:block;
+}
+
+#login-section .login .back {
+	color:#dcdcdc;
+}
+
+#login-section .login .office {
+	color:#b32728;
+}
+
+#login-content {
+  padding: 20px;
+  background-color:#fff;
+}
+
+
+/**
+*
+* TIMECLOCK SPECIFIC STYLE
+*
+*/
+
+#time-clock ul {
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	list-style: none;
+	float:left; 
+}
+
+
+#time-clock ul li {
+	margin:0 20px 0 0;
+	padding:0 0 0 0;
+	list-style-type: none;
+	float:left;
+	line-height: 1;  
+	/*display:inline-block;
+	vertical-align: middle;*/
+}
+
+
+.search input[type="text"], 
+.search select {
+	background-color:#1a1a19;
+	font-size:11px;
+	color:#dcdcdc;
+}
+
+/**
+*
+* SUMMARY SPECIFIC STYLE
+*
+*/
+.table-inline-list {  
+	width:100%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	list-style: none;
+	float:left; 
+
+}
+
+.table-inline-list li {
+	width:25%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	list-style-type: none;
+	float:left;
+	line-height: 1; 
+
+}
+
+.table.table-inline>tbody>tr>td, 
+.table.table-inline>tbody>tr>th, 
+.table.table-inline>tfoot>tr>td, 
+.table.table-inline>tfoot>tr>th, 
+.table.table-inline>thead>tr>td, 
+.table.table-inline>thead>tr>th {
+
+	color:#959595;
+
+}
+
+.table.table-inline>tbody>tr>td {
+	border-color:#121211;
+}
+
+.table.table-inline>tbody>tr>td.first-tr-td {
+  border-top:none;
+  border-top:0;
+
+}
+
+.table.summary {}
+
+/**
+*
+* SIDEBAR
+*
+*/
+
+.sidebar .table.table-inline>tbody>tr>td span {
+
+	color:#f2f2f2;
+
+}
+
+/*#menu {
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	list-style: none;
+}
+
+#menu li {
+	margin:0 0 0 0;
+	border-color:1px #121211 solid;
+	padding:0 0 0 0;
+	list-style-type: none;
+	background-color: #b32728;
+}*/
+
+/*
+*
+* ICONS
+*
+*/
+
+.custom-plus-icon {
+	width:15px;
+	border:1px #971112 solid;
+	background-color: #971112;
+	text-align: center;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;	
+}
+
+
